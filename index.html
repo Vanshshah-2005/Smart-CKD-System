@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CKD Prediction System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Chronic Kidney Disease Prediction System</h1>
+    <p class="subtitle">Early Detection & Clinical Decision Support</p>
+
+    <!-- Patient Input Form -->
+    <div class="card">
+        <h2>Patient Details</h2>
+
+        <div class="grid">
+            <input type="number" placeholder="Age">
+            <input type="number" placeholder="Blood Pressure (mmHg)">
+            <input type="number" placeholder="Serum Creatinine (mg/dL)">
+            <input type="number" placeholder="Hemoglobin (g/dL)">
+            <input type="number" placeholder="Blood Urea (mg/dL)">
+            <input type="number" placeholder="Blood Glucose (mg/dL)">
+
+            <select>
+                <option>Diabetes</option>
+                <option>Yes</option>
+                <option>No</option>
+            </select>
+
+            <select>
+                <option>Hypertension</option>
+                <option>Yes</option>
+                <option>No</option>
+            </select>
+        </div>
+
+        <button onclick="predict()">Predict CKD Risk</button>
+    </div>
+
+    <!-- Prediction Output -->
+    <div class="card result" id="resultBox">
+        <h2>Prediction Result</h2>
+
+        <p><strong>CKD Status:</strong> <span id="ckdStatus">--</span></p>
+        <p><strong>Risk Level:</strong> <span id="riskLevel">--</span></p>
+        <p><strong>Risk Probability:</strong> <span id="riskScore">--</span></p>
+
+        <h3>Top Risk Factors</h3>
+        <ul id="factors">
+            <li>--</li>
+        </ul>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
